@@ -21,6 +21,7 @@ screen.onkey(key="Left", fun=snake.left)
 screen.onkey(key="Right", fun=snake.right)
 screen.onkey(key="Up", fun=snake.up)
 screen.onkey(key="Down", fun=snake.down)
+screen.onkey(key="Escape", fun=screen.bye)
 
 is_game_on = True
 while is_game_on:
@@ -49,8 +50,5 @@ while is_game_on:
     # Tail collision
     for seg in snake.segments[1:]:  # omit the head
         if snake.head.distance(seg) <= 10:
-            scoreboard.game_over()
-            is_game_on = False
-
-
-screen.exitonclick()
+            scoreboard.reset_score()
+            snake.reset()

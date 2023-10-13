@@ -53,3 +53,11 @@ class Snake:
         new_segment.penup()
         new_segment.color("white")
         self.segments.append(new_segment)
+
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+            seg.hideturtle()
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
