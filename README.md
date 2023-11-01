@@ -23,5 +23,5 @@ To run this Snake game, you need to have Python installed on your system. The ga
 4. Run the game using the following command:
 
    ```bash
-   python snake_game.py
+   python main.py
 
